@@ -1,4 +1,4 @@
-const APP_URL = "https://github.com/AnnaLetyagina/dyshi-svobodno";
+const APP_URL = "https://annaletyagina.github.io/dyshi-svobodno/";
 const FIREBASE_URL = "https://dyshi-svobodno-9b06f-default-rtdb.europe-west1.firebasedatabase.app/";
 
 function initQR() {
