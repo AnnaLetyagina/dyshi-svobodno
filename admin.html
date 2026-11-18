@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Панель психолога</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="adminApp">
+        <h1>🧠 Панель психолога</h1>
+        <p class="sub">Введи 4-значный код студента, чтобы увидеть его результаты.</p>
+
+        <div id="importBanner" class="import-banner" style="display:none;"></div>
+
+        <div class="card qr-card">
+            <h3>📱 QR-код программы</h3>
+            <p class="sub">Отсканируй, чтобы перейти на сайт программы.</p>
+            <div class="qr-center">
+                <img id="qrImage" src="" alt="QR-код" width="200" height="200">
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>🔍 Поиск по коду</h3>
+            <p class="sub">Студент показывает 4-значный код.</p>
+            <input type="text" id="codeInput" placeholder="Введите код (например: 1234)" maxlength="4" inputmode="numeric" style="width:100%; padding:12px; background:#0f172a; border:1px solid #334155; border-radius:8px; color:#e2e8f0; font-size:1.2rem; text-align:center; letter-spacing:4px; margin-bottom:10px;">
+            <button class="btn" onclick="loadByCode()">Показать результаты</button>
+        </div>
+
+        <h2>📊 Результаты студента</h2>
+        <div id="stats" class="stats"></div>
+        <div id="resultsList"></div>
+
+        <div class="action-row" style="margin-top:15px;">
+            <button class="btn danger" onclick="clearAll()">🗑️ Очистить результаты</button>
+        </div>
+
+        <button class="back" onclick="location.href='index.html'" style="margin-top:30px;">← На главную</button>
+    </div>
+    <script src="admin.js"></script>
+</body>
+</html>
